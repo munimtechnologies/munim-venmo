@@ -1,0 +1,10 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+  <!-- Merged into the app's manifest: package visibility for isVenmoInstalled()
+       (Android 11+), and for finding a Custom Tabs browser. -->
+  <queries>
+    <package android:name="com.venmo" />
+    <intent>
+      <action android:name="android.support.customtabs.action.CustomTabsService" />
+    </intent>
+  </queries>
+</manifest>

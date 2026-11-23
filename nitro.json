@@ -1,0 +1,30 @@
+{
+  "$schema": "https://nitro.margelo.com/nitro.schema.json",
+  "cxxNamespace": [
+    "munimvenmo"
+  ],
+  "ios": {
+    "iosModuleName": "MunimVenmo"
+  },
+  "android": {
+    "androidNamespace": [
+      "munimvenmo"
+    ],
+    "androidCxxLibName": "MunimVenmo"
+  },
+  "autolinking": {
+    "MunimVenmo": {
+      "ios": {
+        "language": "swift",
+        "implementationClassName": "HybridMunimVenmo"
+      },
+      "android": {
+        "language": "kotlin",
+        "implementationClassName": "HybridMunimVenmo"
+      }
+    }
+  },
+  "ignorePaths": [
+    "**/node_modules"
+  ]
+}

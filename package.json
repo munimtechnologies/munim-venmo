@@ -1,0 +1,129 @@
+{
+  "name": "munim-venmo",
+  "version": "0.1.0",
+  "description": "Venmo checkout for React Native: opens the Venmo app to approve a PayPal order (like PayPal's mobile SDK app switch), or Venmo's site in an in-app sheet when the app isn't installed. Built on Nitro Modules, with Expo support",
+  "main": "./lib/commonjs/index.js",
+  "module": "./lib/module/index.js",
+  "types": "./lib/typescript/src/index.d.ts",
+  "react-native": "src/index",
+  "source": "src/index",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "clean": "git clean -dfX",
+    "release": "semantic-release",
+    "build": "npm run typecheck && bob build",
+    "codegen": "nitrogen --logLevel=\"debug\" && npm run build && node post-script.js",
+    "release:local": "node scripts/release-local.mjs",
+    "test": "jest"
+  },
+  "keywords": [
+    "react-native",
+    "expo",
+    "venmo",
+    "paypal",
+    "checkout",
+    "payments",
+    "app-switch",
+    "universal-links",
+    "aswebauthenticationsession",
+    "custom-tabs",
+    "ios",
+    "android",
+    "typescript",
+    "nitro-modules",
+    "nitro",
+    "munim-technologies"
+  ],
+  "files": [
+    "src",
+    "!src/__tests__",
+    "react-native.config.js",
+    "lib",
+    "nitrogen",
+    "nitro.json",
+    "android/build.gradle",
+    "android/consumer-rules.pro",
+    "android/fix-prefab.gradle",
+    "android/gradle.properties",
+    "android/CMakeLists.txt",
+    "android/src",
+    "ios/**/*.h",
+    "ios/**/*.m",
+    "ios/**/*.mm",
+    "ios/**/*.cpp",
+    "ios/**/*.swift",
+    "app.plugin.js",
+    "*.podspec",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/munimtechnologies/munim-venmo.git"
+  },
+  "author": "sheehanmunim <support@munimtech.com> (https://github.com/sheehanmunim)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/munimtechnologies/munim-venmo/issues"
+  },
+  "homepage": "https://github.com/munimtechnologies/munim-venmo#readme",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "expo": {
+    "name": "munim-venmo",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "install": {
+      "exclude": [
+        "react-native"
+      ]
+    }
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@types/jest": "^30.0.0",
+    "@types/react": "^19.3.0",
+    "conventional-changelog-conventionalcommits": "^9.3.1",
+    "jest": "^30.5.2",
+    "nitrogen": "0.37.1",
+    "react": "19.3.0",
+    "react-native": "0.88.0",
+    "react-native-builder-bob": "^0.43.1",
+    "react-native-nitro-modules": "0.37.1",
+    "semantic-release": "^25.0.9",
+    "ts-jest": "^29.4.15",
+    "typescript": "^5.8.3"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*",
+    "react-native-nitro-modules": ">=0.36.5 <1"
+  },
+  "prettier": {
+    "quoteProps": "consistent",
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "useTabs": false,
+    "semi": false
+  },
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "module",
+      [
+        "typescript",
+        {
+          "project": "tsconfig.json"
+        }
+      ]
+    ]
+  }
+}
