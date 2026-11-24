@@ -2,6 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/munimtechnologies/munim-venmo">
+    <img alt="Munim Technologies Venmo" height="128" src="./.github/resources/banner.png?v=3">
     <h1 align="center">munim-venmo</h1>
   </a>
 </p>
@@ -470,4 +471,6 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 
 ---
 
-<img alt="Star the Munim Technologies repo on GitHub to support the project" src="https://user-images.githubusercontent.com/9664363/185428788-d762fd5d-97b3-4f59-8db7-f72405be9677.gif" width="50%">
+<a href="https://github.com/munimtechnologies/munim-venmo">
+  <img alt="Enjoying Munim Technologies? Star the repo on GitHub" src="./.github/resources/star-repo.svg" width="50%">
+</a>
