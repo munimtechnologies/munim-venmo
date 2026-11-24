@@ -1,6 +1,6 @@
 {
   "name": "munim-venmo",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Venmo checkout for React Native: opens the Venmo app to approve a PayPal order (like PayPal's mobile SDK app switch), or Venmo's site in an in-app sheet when the app isn't installed. Built on Nitro Modules, with Expo support",
   "main": "./lib/commonjs/index.js",
   "module": "./lib/module/index.js",
